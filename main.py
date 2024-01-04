@@ -1,8 +1,26 @@
-from sonnets import sonnets_list
+from sonnets import Sonnet, sonnets_dictionary_list, sonnets_list
 from search import Index, Query
 
 print("Reading sonnets...")
 index = Index(sonnets_list)
+
+
+# Print the result for the task №2:
+fifteenth_sonnet = Sonnet(sonnets_dictionary_list[14])
+
+print('Print the result for the fask №2:')
+print("Sonnet Number is:", fifteenth_sonnet.id)
+print("Sonnet Title is:", fifteenth_sonnet.title)
+print("Sonnet Lines are:", fifteenth_sonnet.lines)
+
+# Print the result for the tokenization task:
+print('Print the result for the tokenization task:')
+print(fifteenth_sonnet.tokenize(use_stemming=False))
+
+# Print the result for the stemming task:
+print('Print the result for the stemming task:')
+print(fifteenth_sonnet.tokenize(use_stemming=True))
+
 while True:
     search_terms = input("Search for sonnets('q' to quit): ")
 

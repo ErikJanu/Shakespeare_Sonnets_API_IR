@@ -1,9 +1,5 @@
 import requests
 import re
-import nltk
-from nltk import word_tokenize
-
-nltk.download('punkt')
 
 
 class Document:
@@ -26,7 +22,7 @@ class Document:
         for line in self.lines:
             line = line.lower()
             line = re.sub(r'[^\w\s]', '', line)
-            tokens = word_tokenize(line)
+            tokens = line.split()
 
             if use_stemming:
                 stemmed_tokens = apply_stemming(tokens)
