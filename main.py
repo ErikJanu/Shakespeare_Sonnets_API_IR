@@ -1,3 +1,6 @@
+## This project was completed as a group ##
+## Hoang Nam Huynh-Viet, Erik Janusch, Elizaveta Ziulkova ##
+
 from sonnets import Sonnet, sonnets_dictionary_list, sonnets_list
 from search import Index, Query
 
